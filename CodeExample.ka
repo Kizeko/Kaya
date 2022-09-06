@@ -1,0 +1,37 @@
+from Class import Test, Test2
+
+// Primitive types : u8, i8, u16, i16, u32, i32, u64, i64, usize, isize
+//                                     f32,      f64
+//                   String
+//                   void
+//                   bool 
+
+// Variable
+let counter: i32 = 5;
+
+// Constant
+const NAME: String = "Kizeko";
+
+// Function
+fun printUnicode(number: f32, unicode: i32) -> void {
+    println("Here is my number rounded to 2 : {:~2}".format(number));
+    println("Here is my number truncated to 3 : {:.3}".format(number));
+    println("Here is my unicode : {:x}".format(unicode));
+    println("Here is my kanji : {:c}".format(unicode));
+}
+
+// Class
+
+class Warrior : Character impl Serializable, Display {
+    pri let attackDamage_: i32 = 5;
+
+    pub Warrior(attackDamage: i32) {
+        super();
+        this->attackDamage_ = attackDamage;
+    }
+
+    pub getAttackDamage() {
+        return this->attackDamage_;
+    }
+}
+
